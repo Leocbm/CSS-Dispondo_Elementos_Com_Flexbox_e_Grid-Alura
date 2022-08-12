@@ -38,6 +38,15 @@ body {
     background-color:#15191C ;
     width: 75vw; /*largura de viewport*/
     height: 100vh ;/*altura de viewport*/
+
+    position: absolute;
+    left: -100vw;
+    transition: .25s;
+}
+
+.menu-lateral--ativo {
+    left: 0;
+    transition: .25s;
 }
 
 .menu-lateral__logo {
