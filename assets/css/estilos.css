@@ -6,4 +6,9 @@ body {
 
 .cabecalho {
     display: flex;
+    justify-content: space-between; /* meche com os elementos no eixo horizontal*/
+    align-items: center ; /*meche com os elementos no eixo vertical*/
+    background-color: #15191C;
+    padding: 8px 16px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.16);
 }
