@@ -5,7 +5,7 @@
 
 body {
     background-color: #1D232A;
-    font-family: 'Open Sans', 'Icones', sans-serif;
+    font-family: 'Open Sans', 'icones', sans-serif;
     color: #FFFFFF;
 }
 
@@ -18,8 +18,8 @@ body {
 
 .cabecalho {
     display: flex;
-    justify-content: space-between; /* meche com os elementos no eixo horizontal*/
-    align-items: center ; /*meche com os elementos no eixo vertical*/
+    justify-content: space-between;
+    align-items: center;
     background-color: #15191C;
     padding: 8px 16px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.16);
@@ -43,7 +43,7 @@ body {
     display: none;
 }
 
-@media screen and (min-width:1440px) {
+@media screen and (min-width: 1440px) {
     .cabecalho {
         background-color: #1D232A;
         display: grid;
@@ -95,9 +95,9 @@ body {
 .menu-lateral {
     display: flex;
     flex-direction: column;
-    background-color:#15191C ;
-    width: 75vw; /*largura de viewport*/
-    height: 100vh ;/*altura de viewport*/
+    background-color: #15191C;
+    width: 75vw;
+    height: 100vh;
 
     position: absolute;
     left: -100vw;
@@ -162,7 +162,7 @@ body {
     content: "\e90a";
 }
 
-@media screen and (min-width:1440px) {
+@media screen and (min-width: 1440px) {
     .menu-lateral {
         position: static;
         width: 200px;
@@ -191,6 +191,13 @@ body {
     .principal {
         display: grid;
         grid-template-columns: auto 1fr auto;
+        grid-template-areas:
+            "titulo-pagina titulo-pagina titulo-pagina"
+            "destaque-video destaque-video videos-recentes"
+            "secao-videos secao-videos secao-videos"
+            "produtos-recentes destaque-produtos destaque-produtos"
+            "secao-produtos secao-produtos secao-produtos "
+        ;
         column-gap: 32px;
         padding: 16px 60px;
         grid-column: 2;
@@ -215,13 +222,13 @@ body {
     gap: 8px;
 }
 
-.cartao__titulo {
-    font-size: 1.2rem;
-    font-weight: 700;
+.cartao__destaque {
     grid-column: span 2;
 }
 
-.cartao__destaque {
+.cartao__titulo {
+    font-size: 1.2rem;
+    font-weight: 700;
     grid-column: span 2;
 }
 
@@ -239,12 +246,12 @@ body {
 
 .cartao__info--tempo::before {
     content: "\e90c";
-    margin-right: 8px;
+    margin-right: 8px;    
 }
 
 .cartao__info--visualizacao::before {
     content: "\e90f";
-    margin-right: 8px;
+    margin-right: 8px;    
 }
 
 .cartao__botao {
@@ -273,12 +280,12 @@ body {
     margin-right: 8px;
 }
 
-.cartao__recentes {
+.cartao--recentes {
     display: none;
 }
 
 @media screen and (min-width: 1440px) {
-    .cartao__recentes {
+    .cartao--recentes {
         display: grid;
         grid-template-columns: auto auto;
         align-items: center;
@@ -288,7 +295,7 @@ body {
         box-sizing: border-box;
     }
 
-    .cartao--recentes__titulo {
+    .cartao--recentes .cartao__titulo {
         grid-column: auto;
     }
 
@@ -298,7 +305,7 @@ body {
         color: #0480DC;
         justify-self: flex-end;
     }
-
+    
     .cartao__lista {
         display: grid;
         row-gap: 16px;
@@ -331,4 +338,28 @@ body {
 .secao {
     display: grid;
     gap: 16px;
+}
+
+.destaque-video {
+    grid-area: destaque-video;
+}
+
+.videos-recentes {
+    grid-area: videos-recentes;
+}
+
+.secao-videos {
+    grid-area: secao-videos;
+}
+
+.destaque-produto {
+    grid-area: destaque-produto;
+}
+
+.produtos-recentes {
+    grid-area: produtos-recentes;
+}
+
+.secao-produtos {
+    grid-area: secao-produtos;
 }
