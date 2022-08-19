@@ -40,7 +40,10 @@
 
 ## Deploy da Aplicação
 
-> Link do deploy da aplicação com netlify: https://flexbox-e-grid-alura-leocbm.netlify.app
+> Link do deploy da aplicação com Vercel: https://hzc-page-leocbm.vercel.app/
+
+> Imagem representativa da página
+![image](https://user-images.githubusercontent.com/54343955/185694218-4209ee69-7437-4fbb-b784-f60a8a4e551c.png)
 
 ## Objetivos
 
